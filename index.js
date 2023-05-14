@@ -65,9 +65,9 @@ function showArtistDetails(artist) {
 
 }
 
-// gets new ramen from form, then adds it to database, then adds to menu
+// gets new artist from form, then adds it to database, then adds to menu
 function addNewArtist() {
-    // build newRamen object from form inputs
+    // build newArtist object from form inputs
     const newName = document.getElementById("new-name").value;
     const newRestaurant = document.getElementById("new-restaurant").value;
     const newImage = document.getElementById("new-image").value;
@@ -81,7 +81,7 @@ function addNewArtist() {
         "date": newRating,
         "comment": newComment
     }
-    // POST new ramen to db
+    // POST new artist to db
     fetch("http://localhost:3000/artists", {
         method: 'POST',
         headers: {
@@ -90,16 +90,16 @@ function addNewArtist() {
         body: JSON.stringify(newArtist)
     })
 
-    // add new ramen to menu by calling renderOneRamen()
+    // add new ramen to menu by calling renderOneArtist()
     renderOneArtist(newArtist);
 
-    // display the details of the new ramen (nifty!)
+    // display the details of the new artist (nifty!)
     showArtistDetails(newArtist);
 }
 
-// deletes ramen from db and from ramen menu
-// we pass in the id of the ramen to identify it on the back end
-// and we pass in the ramenDiv to identify it on the front end
+// deletes ramen from db and from artist menu
+// we pass in the id of the artist to identify it on the back end
+// and we pass in the artistDiv to identify it on the front end
 function deleteArtist(id, artistDiv) {
     // delete ramen from database
     fetch(`http://localhost:3000/artists/${id}`, {
@@ -109,10 +109,10 @@ function deleteArtist(id, artistDiv) {
         }
     })
 
-    // delete corresponding ramen image from menu
+    // delete corresponding artist image from menu
     artistDiv.remove();
 
-    // reset the displayed ramen info
+    // reset the displayed artist info
     const placeholderInfo = {
         "name": "Click a artist!",
         "restaurant": ":3",
