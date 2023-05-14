@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
 })
 
 // fetch artists
-function displayArtists() {
+function displayArtists(artists) {
     fetch('http://localhost:3000/artists')
         .then(res => res.json())
         .then(artists => {
@@ -13,7 +13,12 @@ function displayArtists() {
             showArtistDetails(artists[0]);
 
         })
+    artists.addEventListener('mousemove', event => {
+        addGlow(event, artists);
+    })
 }
+
+
 function addSubmitListener() {
     const artistForm = document.getElementById('new-artist');
 
@@ -130,3 +135,42 @@ function deleteArtist(id, artistDiv) {
 
     showArtistDetails(placeholderInfo);
 }
+
+
+function addGlow(event, artistImage) {
+    const colors = ['red', 'blue', 'green'];
+    const randomColor = colors[Math.floor(Math.random() * colors.length)];
+
+    artistImage.style.borderColor = randomColor;
+    artistImage.style.borderWidth = '5px';
+    artistImage.style.borderStyle = 'solid';
+    artistImage.style.transition = 'border-color 0.5s, border-width 0.5s';
+
+    setTimeout(() => {
+        artistImage.style.borderColor = '';
+        artistImage.style.borderWidth = '';
+        artistImage.style.borderStyle = '';
+        artistImage.style.transition = '';
+    }, 1000);
+}
+
+// same function as above is just makes it so that the border of the main artist doesn't fade
+
+function addGlowToMainArtist(event, artistImage) {
+    const colors = ['red', 'blue', 'green'];
+    const randomColor = colors[Math.floor(Math.random() * colors.length)];
+
+    artistImage.style.borderColor = randomColor;
+    artistImage.style.borderWidth = '5px';
+    artistImage.style.borderStyle = 'solid';
+    artistImage.style.transition = 'border-color 0.5s, border-width 0.5s';
+
+
+
+
+    artistImage.addEventListener('mousemove', event => {
+        addGlowToMainArtist(event, artistImage);
+    })
+}
+
+
