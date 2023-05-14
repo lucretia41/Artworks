@@ -83,10 +83,10 @@ function addNewArtist() {
 
     const newArtist = {
         "name": newName,
-        "title": newRestaurant,
+        "title": newTitle,
         "image": newImage,
         "date": newDate,
-        "likes": newComment
+        "likes": newLikes
     }
     // POST new artist to db
     fetch("http://localhost:3000/artists", {
@@ -104,11 +104,11 @@ function addNewArtist() {
     showArtistDetails(newArtist);
 }
 
-// deletes ramen from db and from artist menu
+// deletes artist from db and from artist menu
 // we pass in the id of the artist to identify it on the back end
 // and we pass in the artistDiv to identify it on the front end
 function deleteArtist(id, artistDiv) {
-    // delete ramen from database
+    // delete artist from database
     fetch(`http://localhost:3000/artists/${id}`, {
         method: 'DELETE',
         headers: {
@@ -125,7 +125,7 @@ function deleteArtist(id, artistDiv) {
         "title": ":3",
         "image": "",
         "date": "Select a artist to display its rating!",
-        "likes": "Same deal."
+        "likes": "Amazing."
     }
 
     showArtistDetails(placeholderInfo);
