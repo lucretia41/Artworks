@@ -25,6 +25,8 @@ header {
   display: block;
   position: absolute;
   z-index: 100000;
+  background-color: blue;
+  color: antiquewhite;
 }
 
 #artist-menu {
