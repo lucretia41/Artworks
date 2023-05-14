@@ -27,25 +27,25 @@ header {
   z-index: 100000;
 }
 
-#ramen-menu {
+#artist-menu {
   display: flex;
   overflow-x: auto;
   margin: 1rem 0;
   max-width: calc(100vw - 2rem);
 }
 
-#ramen-menu img {
+#artist-menu img {
   flex: 0 1 auto;
   height: 150px;
   margin-right: 0.5rem;
   cursor: pointer;
 }
 
-#ramen-menu img:last-child {
+#artist-menu img:last-child {
   margin-right: 0;
 }
 
-#ramen-detail {
+#artist-detail {
   position: relative;
 }
 
@@ -54,7 +54,7 @@ header {
 }
 
 #detail-name,
-#detail-restaurant {
+#detail-title {
   position: absolute;
   left: 10px;
   padding: 0.25rem 5rem 0.25rem 1rem;
@@ -65,7 +65,7 @@ header {
   bottom: 60px;
 }
 
-#detail-restaurant {
+#detail-title {
   bottom: 20px;
 }
 

@@ -49,37 +49,44 @@ function renderOneArtist(artist) {
 }
 
 function showArtistDetails(artist) {
+    // resto = title
+    //rating =date
+    //comment = likes
 
     //get detail elements
     const detailImage = document.getElementById("detail-image");
     const detailName = document.getElementById("detail-name");
-    const detailRestaurant = document.getElementById("detail-restaurant");
-    const detailRating = document.getElementById("detail-rating");
-    const detailComment = document.getElementById("detail-comment");
+    const detailTitle = document.getElementById("detail-title");
+    const detailDate = document.getElementById("detail-date");
+    const detailLikes = document.getElementById("detail-likes");
 
     detailImage.src = artist.image;
     detailName.textContent = artist.name;
-    detailRestaurant.textContent = artist.restaurant;
-    detailRating.textContent = artist.date;
-    detailComment.textContent = artist.comment;
+    detailTitle.textContent = artist.title;
+    detailDate.textContent = artist.date;
+    detailLikes.textContent = artist.likes;
 
 }
 
 // gets new artist from form, then adds it to database, then adds to menu
 function addNewArtist() {
+    // resto = title
+    //rating =date
+    //comment = likes
+
     // build newArtist object from form inputs
     const newName = document.getElementById("new-name").value;
-    const newRestaurant = document.getElementById("new-restaurant").value;
+    const newTitle = document.getElementById("new-title").value;
     const newImage = document.getElementById("new-image").value;
-    const newRating = document.getElementById("new-rating").value;
-    const newComment = document.getElementById("new-comment").value;
+    const newDate = document.getElementById("new-date").value;
+    const newLikes = document.getElementById("new-likes").value;
 
     const newArtist = {
         "name": newName,
-        "restaurant": newRestaurant,
+        "title": newRestaurant,
         "image": newImage,
-        "date": newRating,
-        "comment": newComment
+        "date": newDate,
+        "likes": newComment
     }
     // POST new artist to db
     fetch("http://localhost:3000/artists", {
@@ -115,10 +122,10 @@ function deleteArtist(id, artistDiv) {
     // reset the displayed artist info
     const placeholderInfo = {
         "name": "Click a artist!",
-        "restaurant": ":3",
+        "title": ":3",
         "image": "",
-        "rating": "Select a artist to display its rating!",
-        "comment": "Same deal."
+        "date": "Select a artist to display its rating!",
+        "likes": "Same deal."
     }
 
     showArtistDetails(placeholderInfo);
