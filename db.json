@@ -10,18 +10,6 @@
       "name": "Vincent van Gogh",
       "likes": 3
     },
-
-    {
-      "id": "2",
-      "date": 1890,
-      "isHighlight": true,
-      "image": "/Users/scooter/Desktop/project1images/irises.jpeg",
-      "objectName": "Irises",
-      "title": "Irises",
-      "name": "Vincent van Gogh",
-      "likes": 6
-    },
-
     {
       "id": "3",
       "date": 1887,
@@ -31,17 +19,6 @@
       "title": "Self Portrait with straw hat",
       "name": "Vincent van Gogh",
       "likes": 5
-    },
-
-    {
-      "id": "4",
-      "date": 1888,
-      "isHighlight": false,
-      "image": "/Users/scooter/Desktop/project1images/shoes.jpeg",
-      "objectName": "Shoes",
-      "title": "Shoes",
-      "name": "Vincent van Gogh",
-      "likes": 8
     },
     {
       "id": "5",
@@ -53,7 +30,6 @@
       "name": "Vincent van Gogh",
       "likes": 8
     },
-
     {
       "id": "6",
       "date": 1889,
@@ -64,7 +40,6 @@
       "name": " Vincent van Gogh",
       "likes": 8
     },
-
     {
       "id": "7",
       "date": 1874,
@@ -75,7 +50,6 @@
       "name": "Edgar Degas",
       "likes": 8
     },
-
     {
       "id": "8",
       "date": 1874,
@@ -86,7 +60,6 @@
       "name": "Edgar Degas",
       "likes": 8
     },
-
     {
       "id": "9",
       "date": 1890,
@@ -97,7 +70,6 @@
       "name": "Edgar Degas",
       "likes": 8
     },
-
     {
       "id": "10",
       "date": 1632,
@@ -108,7 +80,6 @@
       "name": "Rembrandt van Rijn",
       "likes": 8
     },
-
     {
       "id": "11",
       "date": 1650,
@@ -119,7 +90,6 @@
       "name": "Rembrandt van Rijn",
       "likes": 8
     },
-
     {
       "id": "12",
       "date": 1630,
@@ -130,7 +100,6 @@
       "name": "Rembrandt van Rijn",
       "likes": 8
     },
-
     {
       "id": "13",
       "date": 1662,
@@ -141,7 +110,6 @@
       "name": "Johannes Vermeer ",
       "likes": 8
     },
-
     {
       "id": "14",
       "date": 1656,
@@ -152,7 +120,6 @@
       "name": "Johannes Vermeer",
       "likes": 8
     },
-
     {
       "id": "15",
       "date": 1885,
@@ -162,6 +129,14 @@
       "title": "Race Horses",
       "name": "Edgar Degas",
       "likes": 8
+    },
+    {
+      "name": "Vincent van Gogh",
+      "title": "",
+      "image": "",
+      "date": "",
+      "likes": "",
+      "id": "8gpn4Z0"
     }
   ]
 }
