@@ -12,126 +12,126 @@ function displayArtists(artists) {
             artists.forEach(artist => renderOneArtist(artist))
             showArtistDetails(artists[0]);
 
-            //     })
-            // artistImage.addEventListener('mousemove', event => {
-            //     addGlow(event, artistImage);
-            // })
         })
+    artistImage.addEventListener('mousemove', event => {
+        addGlow(event, artistImage);
+    })
+}
 
 
-    function addSubmitListener() {
-        const artistForm = document.getElementById('new-artist');
+function addSubmitListener() {
+    const artistForm = document.getElementById('new-artist');
 
-        artistForm.addEventListener('click', (e) => {
-            e.preventDefault();
-            addNewArtist();
-            artistForm.reset();
-        })
-    };
+    artistForm.addEventListener('click', (e) => {
+        e.preventDefault();
+        addNewArtist();
+        artistForm.reset();
+    })
+};
 
-    // add artist one at time
+// add artist one at time
 
-    function renderOneArtist(artist) {
-        const artistImg = document.createElement('img');
-        const artistDiv = document.createElement('div');
-        const artistMenu = document.getElementById('artist-menu');
+function renderOneArtist(artist) {
+    const artistImg = document.createElement('img');
+    const artistDiv = document.createElement('div');
+    const artistMenu = document.getElementById('artist-menu');
 
-        artistImg.src = artist.image;
+    artistImg.src = artist.image;
 
-        artistMenu.append(artistDiv);
-        artistDiv.append(artistImg);
+    artistMenu.append(artistDiv);
+    artistDiv.append(artistImg);
 
-        artistImg.addEventListener("mouseover", () => showArtistDetails(artist));
+    artistImg.addEventListener("mouseover", () => showArtistDetails(artist));
 
-        const deleteButton = document.createElement('button');
-        deleteButton.textContent = "delete";
-        deleteButton.className = "delete-btn";
-        artistDiv.append(deleteButton);
+    const deleteButton = document.createElement('button');
+    deleteButton.textContent = "delete";
+    deleteButton.className = "delete-btn";
+    artistDiv.append(deleteButton);
 
 
-        deleteButton.addEventListener('click', () => deleteArtist(artist.id, artistDiv))
+    deleteButton.addEventListener('click', () => deleteArtist(artist.id, artistDiv))
 
+}
+
+function showArtistDetails(artist) {
+    // resto = title
+    //rating =date
+    //comment = likes
+
+    //get detail elements
+    const detailImage = document.getElementById("detail-image");
+    const detailName = document.getElementById("detail-name");
+    const detailTitle = document.getElementById("detail-title");
+    const detailDate = document.getElementById("detail-date");
+    const detailLikes = document.getElementById("detail-likes");
+
+    detailImage.src = artist.image;
+    detailName.textContent = artist.name;
+    detailTitle.textContent = artist.title;
+    detailDate.textContent = artist.date;
+    detailLikes.textContent = artist.likes;
+
+}
+
+// gets new artist from form, then adds it to database,
+function addNewArtist() {
+
+
+    // build newArtist object from form inputs
+    const newName = document.getElementById("new-name").value;
+    const newTitle = document.getElementById("new-title").value;
+    const newImage = document.getElementById("new-image").value;
+    const newDate = document.getElementById("new-date").value;
+    const newLikes = document.getElementById("new-likes").value;
+
+    const newArtist = {
+        "name": newName,
+        "title": newTitle,
+        "image": newImage,
+        "date": newDate,
+        "likes": newLikes
     }
+    // POST new artist to db
+    fetch("http://localhost:3000/artists", {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(newArtist)
+    })
 
-    function showArtistDetails(artist) {
-        // resto = title
-        //rating =date
-        //comment = likes
+    // add new artist to menu by calling renderOneArtist()
+    renderOneArtist(newArtist);
 
-        //get detail elements
-        const detailImage = document.getElementById("detail-image");
-        const detailName = document.getElementById("detail-name");
-        const detailTitle = document.getElementById("detail-title");
-        const detailDate = document.getElementById("detail-date");
-        const detailLikes = document.getElementById("detail-likes");
+    // display the details of the new artist
+    showArtistDetails(newArtist);
+}
 
-        detailImage.src = artist.image;
-        detailName.textContent = artist.name;
-        detailTitle.textContent = artist.title;
-        detailDate.textContent = artist.date;
-        detailLikes.textContent = artist.likes;
+// deletes artist from db and from artist menu
 
-    }
-
-    // gets new artist from form, then adds it to database,
-    function addNewArtist() {
-
-
-        // build newArtist object from form inputs
-        const newName = document.getElementById("new-name").value;
-        const newTitle = document.getElementById("new-title").value;
-        const newImage = document.getElementById("new-image").value;
-        const newDate = document.getElementById("new-date").value;
-        const newLikes = document.getElementById("new-likes").value;
-
-        const newArtist = {
-            "name": newName,
-            "title": newTitle,
-            "image": newImage,
-            "date": newDate,
-            "likes": newLikes
+function deleteArtist(id, artistDiv) {
+    // delete artist from database
+    fetch(`http://localhost:3000/artists/${id}`, {
+        method: 'DELETE',
+        headers: {
+            'Content-Type': 'application/json'
         }
-        // POST new artist to db
-        fetch("http://localhost:3000/artists", {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(newArtist)
-        })
+    })
 
-        // add new artist to menu by calling renderOneArtist()
-        renderOneArtist(newArtist);
+    // delete corresponding artist image 
+    artistDiv.remove();
 
-        // display the details of the new artist
-        showArtistDetails(newArtist);
+    // reset the displayed artist info
+    const placeholderInfo = {
+        "name": "Click a artist!",
+        "title": ":3",
+        "image": "",
+        "date": "Select a artist to display its rating!",
+        "likes": "Amazing."
     }
 
-    // deletes artist from db and from artist menu
-
-    function deleteArtist(id, artistDiv) {
-        // delete artist from database
-        fetch(`http://localhost:3000/artists/${id}`, {
-            method: 'DELETE',
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        })
-
-        // delete corresponding artist image 
-        artistDiv.remove();
-
-        // reset the displayed artist info
-        const placeholderInfo = {
-            "name": "Click a artist!",
-            "title": ":3",
-            "image": "",
-            "date": "Select a artist to display its rating!",
-            "likes": "Amazing."
-        }
-
-        showArtistDetails(placeholderInfo);
-    }
+    showArtistDetails(placeholderInfo);
+}
 }
 
 // function addGlow(event, artistImage) {
