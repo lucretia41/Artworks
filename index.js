@@ -22,7 +22,7 @@ function displayArtists(artists) {
 function addSubmitListener() {
     const artistForm = document.getElementById('new-artist');
 
-    artistForm.addEventListener('submit', (e) => {
+    artistForm.addEventListener('click', (e) => {
         e.preventDefault();
         addNewArtist();
         artistForm.reset();
@@ -41,7 +41,7 @@ function renderOneArtist(artist) {
     artistMenu.append(artistDiv);
     artistDiv.append(artistImg);
 
-    artistImg.addEventListener("click", () => showArtistDetails(artist));
+    artistImg.addEventListener("mouseover", () => showArtistDetails(artist));
 
     const deleteButton = document.createElement('button');
     deleteButton.textContent = "delete";

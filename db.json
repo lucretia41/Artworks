@@ -41,66 +41,6 @@
       "likes": 8
     },
     {
-      "id": "7",
-      "date": 1874,
-      "isHighlight": false,
-      "image": "/Users/scooter/Desktop/project1images/backstage rehearsal.jpeg",
-      "objectName": "The Rehearsal of the Ballet Onstage",
-      "title": "The Rehearsal of the Ballet Onstage",
-      "name": "Edgar Degas",
-      "likes": 8
-    },
-    {
-      "id": "8",
-      "date": 1874,
-      "isHighlight": false,
-      "image": "/Users/scooter/Desktop/project1images/rehearsal.jpeg",
-      "objectName": "The Dance Class",
-      "title": "The Dance Class",
-      "name": "Edgar Degas",
-      "likes": 8
-    },
-    {
-      "id": "9",
-      "date": 1890,
-      "isHighlight": false,
-      "image": "/Users/scooter/Desktop/project1images/dancers in green.jpeg",
-      "objectName": "Dancers, Pink and Green",
-      "title": "Dancers, Pink and Green",
-      "name": "Edgar Degas",
-      "likes": 8
-    },
-    {
-      "id": "10",
-      "date": 1632,
-      "isHighlight": false,
-      "image": "/Users/scooter/Desktop/project1images/man in turban.jpeg",
-      "objectName": "Man in a Turban",
-      "title": "Man in a Turban",
-      "name": "Rembrandt van Rijn",
-      "likes": 8
-    },
-    {
-      "id": "11",
-      "date": 1650,
-      "isHighlight": false,
-      "image": "/Users/scooter/Desktop/project1images/saskia.jpeg",
-      "objectName": "Hendrickje Stoffels",
-      "title": "Hendrickje Stoffels",
-      "name": "Rembrandt van Rijn",
-      "likes": 8
-    },
-    {
-      "id": "12",
-      "date": 1630,
-      "isHighlight": false,
-      "image": "/Users/scooter/Desktop/project1images/self as young man rembrandt.jpeg",
-      "objectName": "Rembrandt as a Young Man",
-      "title": "Rembrandt as a Young Man",
-      "name": "Rembrandt van Rijn",
-      "likes": 8
-    },
-    {
       "id": "13",
       "date": 1662,
       "isHighlight": false,
