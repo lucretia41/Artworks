@@ -73,11 +73,9 @@ function showArtistDetails(artist) {
 
 }
 
-// gets new artist from form, then adds it to database, then adds to menu
+// gets new artist from form, then adds it to database,
 function addNewArtist() {
-    // resto = title
-    //rating =date
-    //comment = likes
+
 
     // build newArtist object from form inputs
     const newName = document.getElementById("new-name").value;
@@ -102,16 +100,15 @@ function addNewArtist() {
         body: JSON.stringify(newArtist)
     })
 
-    // add new ramen to menu by calling renderOneArtist()
+    // add new artist to menu by calling renderOneArtist()
     renderOneArtist(newArtist);
 
-    // display the details of the new artist (nifty!)
+    // display the details of the new artist
     showArtistDetails(newArtist);
 }
 
 // deletes artist from db and from artist menu
-// we pass in the id of the artist to identify it on the back end
-// and we pass in the artistDiv to identify it on the front end
+
 function deleteArtist(id, artistDiv) {
     // delete artist from database
     fetch(`http://localhost:3000/artists/${id}`, {
@@ -121,7 +118,7 @@ function deleteArtist(id, artistDiv) {
         }
     })
 
-    // delete corresponding artist image from menu
+    // delete corresponding artist image 
     artistDiv.remove();
 
     // reset the displayed artist info
@@ -154,7 +151,7 @@ function addGlow(event, artistImage) {
     }, 1000);
 }
 
-// same function as above is just makes it so that the border of the main artist doesn't fade
+
 
 function addGlowToMainArtist(event, artistImage) {
     const colors = ['red', 'blue', 'green'];
