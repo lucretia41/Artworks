@@ -13,8 +13,8 @@ function displayArtists(artists) {
             showArtistDetails(artists[0]);
 
         })
-    artists.addEventListener('mousemove', event => {
-        addGlow(event, artists);
+    artistImage.addEventListener('mousemove', event => {
+        addGlow(event, artistImage);
     })
 }
 
