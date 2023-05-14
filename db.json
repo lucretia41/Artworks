@@ -1,3 +1,167 @@
 {
-  "artists": []
+  "artists": [
+    {
+      "id": "1",
+      "date": 1888,
+      "isHighlight": false,
+      "image": "/Users/scooter/Desktop/project1images/oleanders.jpeg",
+      "objectName": "oleanders",
+      "title": "Oleanders",
+      "name": "Vincent van Gogh",
+      "likes": 3
+    },
+
+    {
+      "id": "2",
+      "date": 1890,
+      "isHighlight": true,
+      "image": "/Users/scooter/Desktop/project1images/irises.jpeg",
+      "objectName": "Irises",
+      "title": "Irises",
+      "name": "Vincent van Gogh",
+      "likes": 6
+    },
+
+    {
+      "id": "3",
+      "date": 1887,
+      "isHighlight": false,
+      "image": "/Users/scooter/Desktop/project1images/straw hat.jpeg",
+      "objectName": "Self Portrait with straw hat",
+      "title": "Self Portrait with straw hat",
+      "name": "Vincent van Gogh",
+      "likes": 5
+    },
+
+    {
+      "id": "4",
+      "date": 1888,
+      "isHighlight": false,
+      "image": "/Users/scooter/Desktop/project1images/shoes.jpeg",
+      "objectName": "Shoes",
+      "title": "Shoes",
+      "name": "Vincent van Gogh",
+      "likes": 8
+    },
+    {
+      "id": "5",
+      "date": 1889,
+      "isHighlight": false,
+      "image": "/Users/scooter/Desktop/project1images/wheatfield.jpeg",
+      "objectName": "Wheat Field",
+      "title": "Wheat Field with Cypresses",
+      "name": "Vincent van Gogh",
+      "likes": 8
+    },
+
+    {
+      "id": "6",
+      "date": 1889,
+      "isHighlight": false,
+      "image": "/Users/scooter/Desktop/project1images/cypresses.jpeg",
+      "objectName": "Cypresses",
+      "title": "Cypresses",
+      "name": " Vincent van Gogh",
+      "likes": 8
+    },
+
+    {
+      "id": "7",
+      "date": 1874,
+      "isHighlight": false,
+      "image": "/Users/scooter/Desktop/project1images/backstage rehearsal.jpeg",
+      "objectName": "The Rehearsal of the Ballet Onstage",
+      "title": "The Rehearsal of the Ballet Onstage",
+      "name": "Edgar Degas",
+      "likes": 8
+    },
+
+    {
+      "id": "8",
+      "date": 1874,
+      "isHighlight": false,
+      "image": "/Users/scooter/Desktop/project1images/rehearsal.jpeg",
+      "objectName": "The Dance Class",
+      "title": "The Dance Class",
+      "name": "Edgar Degas",
+      "likes": 8
+    },
+
+    {
+      "id": "9",
+      "date": 1890,
+      "isHighlight": false,
+      "image": "/Users/scooter/Desktop/project1images/dancers in green.jpeg",
+      "objectName": "Dancers, Pink and Green",
+      "title": "Dancers, Pink and Green",
+      "name": "Edgar Degas",
+      "likes": 8
+    },
+
+    {
+      "id": "10",
+      "date": 1632,
+      "isHighlight": false,
+      "image": "/Users/scooter/Desktop/project1images/man in turban.jpeg",
+      "objectName": "Man in a Turban",
+      "title": "Man in a Turban",
+      "name": "Rembrandt van Rijn",
+      "likes": 8
+    },
+
+    {
+      "id": "11",
+      "date": 1650,
+      "isHighlight": false,
+      "image": "/Users/scooter/Desktop/project1images/saskia.jpeg",
+      "objectName": "Hendrickje Stoffels",
+      "title": "Hendrickje Stoffels",
+      "name": "Rembrandt van Rijn",
+      "likes": 8
+    },
+
+    {
+      "id": "12",
+      "date": 1630,
+      "isHighlight": false,
+      "image": "/Users/scooter/Desktop/project1images/self as young man rembrandt.jpeg",
+      "objectName": "Rembrandt as a Young Man",
+      "title": "Rembrandt as a Young Man",
+      "name": "Rembrandt van Rijn",
+      "likes": 8
+    },
+
+    {
+      "id": "13",
+      "date": 1662,
+      "isHighlight": false,
+      "image": "/Users/scooter/Desktop/project1images/waterpitcher.jpeg",
+      "objectName": "Young Woman with a Water Pitcher",
+      "title": "Young Woman with a Water Pitcher",
+      "name": "Johannes Vermeer ",
+      "likes": 8
+    },
+
+    {
+      "id": "14",
+      "date": 1656,
+      "isHighlight": false,
+      "image": "/Users/scooter/Desktop/project1images/vermeer luteplayer.jpeg",
+      "objectName": "Young Woman with a Lute",
+      "title": "Young Woman with a Lute",
+      "name": "Johannes Vermeer",
+      "likes": 8
+    },
+
+    {
+      "id": "15",
+      "date": 1885,
+      "isHighlight": false,
+      "image": "/Users/scooter/Desktop/project1images/degas racers.jpeg",
+      "objectName": "Race Horses",
+      "title": "Race Horses",
+      "name": "Edgar Degas",
+      "likes": 8
+    }
+  ]
 }
