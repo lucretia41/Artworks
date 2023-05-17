@@ -4,9 +4,6 @@ Artworks
 
 # phase1-projectartistsAtMetApp
 
-
-
-
 app to show art and artists at the Metroploitan Museum of Art
 
 Will utilize the Metropolitan Museum of Art API (all rights reserved to respective owners of artworks)
