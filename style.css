@@ -29,21 +29,21 @@ header {
   color: antiquewhite;
 }
 
-#artist-menu {
+#artist-guild {
   display: flex;
   overflow-x: auto;
   margin: 1rem 0;
   max-width: calc(100vw - 2rem);
 }
 
-#artist-menu img {
+#artist-guild img {
   flex: 0 1 auto;
   height: 150px;
   margin-right: 0.5rem;
   cursor: pointer;
 }
 
-#artist-menu img:last-child {
+#artist-guild img:last-child {
   margin-right: 0;
 }
 
@@ -108,3 +108,9 @@ form h4 {
   color: white;
   background-color: black;
 }
+
+h3 {
+  color: whitesmoke;
+}
+
+
