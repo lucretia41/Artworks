@@ -1,46 +1,46 @@
-document.addEventListener("DOMContentLoaded", () => {
-    displayArtists();
-    addSubmitListener();
+// document.addEventListener("DOMContentLoaded", () => {
+//     displayArtists();
+//     addSubmitListener();
 
-})
+// })
 
 // fetch artists
-function displayArtists() {
-    fetch('http://localhost:3000/artists')
-        .then(res => res.json())
-        .then(artistsData => {
-            // artists.forEach(artist => renderOneArtist(artist))
-            ArtistsDisplay(artistsData),
-                showCaseArtist(artistsData[0]);
+
+fetch("http://localhost:3000/artists")
+    .then(res => res.json())
+    .then(artistsData => {
+        // artists.forEach(artist => renderOneArtist(artist))
+        ArtistsDisplay(artistsData),
+            showCaseArtist(artistsData[0]),
             addNewArtist()
 
+    })
+
+const ArtistsDisplayNav = document.querySelector("#artists-guild")
+
+const artistName = document.querySelector(".name")
+const artistDate = document.querySelector(".date")
+const artistImage = document.querySelector(".detail-image")
+const artistObjectName = document.querySelector("#object-name")
+const artistTitle = document.querySelector("#title")
+
+
+function ArtistsDisplay(artists) {
+    artists.forEach(artist => {
+        const eachArtist = document.createElement('img')
+        eachArtist.src = artist.image
+        ArtistsDisplayNav.appendChild(eachArtist)
+        eachArtist.addEventListener("click", event => {
+            showCaseArtist(artist)
         })
-
-    const ArtistsDisplayNav = document.querySelector("#artists-guild")
-
-    const artistsName = document.querySelector(".name")
-    const artistsDate = document.querySelector(".date")
-    const artistsImage = document.querySelector(".detail-image")
-    const artistsObjectName = document.querySelector("#object-name")
-    const artistsTitle = document.querySelector("#title")
-
-
-    function ArtistsDisplay(artists) {
-        artists.forEach(artist => {
-            const eachArtist = document.createElement('img')
-            eachArtist.src = artist.image
-            ArtistsDisplayNav.appendChild(eachArtist)
-            eachArtist.addEventListener("click", event => {
-                showCaseArtist(artist)
-            })
-            eachArtist.addEventListener('mouseover', event => {
-                addGlow(event, eachArtist);
-            })
+        eachArtist.addEventListener('mouseover', event => {
+            addGlow(event, eachArtist);
         })
-    }
-    // artistImage.addEventListener('mousemove', event => {
-    //     addGlow(event, artistImage);
+    })
 }
+// artistImage.addEventListener('mousemove', event => {
+//     addGlow(event, artistImage);
+
 
 function addGlow(event, artistImage) {
     const colors = ['red', 'blue', 'green'];
@@ -71,13 +71,13 @@ function addGlowToMainArtist(event, artistImage) {
 
 
 function showCaseArtist(artists) {
-    artistsName.textContent = artists.name
-    artistsDate.textContent = artists.date
-    artistsImage.textContent = artists.image
+    artistName.textContent = artists.name
+    artistDate.textContent = artists.date
+    artistImage.textContent = artists.image
     artist.artistsObjectName = artists.objectname
-    artistsTitle.textContent = artists.title
+    artistTitle.textContent = artists.title
 
-    artistsImage.addEventListener('mouseover', event => {
+    artistImage.addEventListener('mouseover', event => {
         addGlowToMainArtist(event, artistImage);
 
     })
@@ -102,7 +102,7 @@ function addNewArtist() {
             title: newArtistName.value,
 
         }
-        displayArtists([newArtist])
+        ArtistsDisplay([newArtist])
     })
 }
 
