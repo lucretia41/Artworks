@@ -4,15 +4,18 @@ Artworks
 
 # phase1-projectartistsAtMetApp
 
-app to show art and artists at the Metroploitan Museum of Art
+An app to show art and artists at the Metroploitan Museum of Art in the form of a single page application.
 
-Will utilize the Metropolitan Museum of Art API (all rights reserved to respective owners of artworks)
-The MET also provides a csv file which may be used in conjunction with this app, will decide as app progresses
-The app should have a search function of artworks, artists names, Titles, is a highlight of museum, possible to which works "include on display".
-The app should also include several eventlisteners such as click, submit, hover or thumbnail of work or enlarge work, not sure yet, likes function as well
+I will utilize the Metropolitan Museum of Art API (all rights reserved to respective owners of artworks) in form of a db.json file as my database.
+The MET also provides a csv file which may be used in conjunction with this app, will decide as app progresses.
+The artists will be displayed with artwork and mouseover each to place into the showcase area of the page.
+If you wish to delete an image simply press the delete button. If you wish to add images to the database input the link in the image file placeholder.
 
-In addition my first blog that helped me figure out soe of the aspects of the first project https://medium.com/@ianscottmartin/my-javascript-journey-9b3bf8423870.
+The app should also include several eventlisteners such as click, submit, and mouseover. Once one clicks or passes over an image to select or delete said image.
 
+In addition my first blog that helped me figure out some of the aspects of the first project https://medium.com/@ianscottmartin/my-javascript-journey-9b3bf8423870.
+
+Project requirements are listed below:
 GitHub RepoCreate New Issue
 Learning Goals
 Design and architect features across a frontend
